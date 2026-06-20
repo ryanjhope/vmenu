@@ -11,860 +11,1012 @@
         const uiConfig = {
             showSizesInListView: false, // Set to true to re-enable "Available in:" text in list view
         };
+
+        // Update these details whenever the weekly special changes
+        const drinkOfTheWeek = {
+            name: "Pink Birthday Cake Frappe",
+            image: "https://u.cubeupload.com/ryanjhope/Addaheading.png",
+            description: "A creamy pink frappe with sweet birthday cake flavour.",
+            sizes: ["Regular", "Large"],
+            prices: {
+                "Regular": 0,
+                "Large": 0
+            },
+            defaultSize: "Regular",
+            singleSize: false,
+            hidePrice: true,
+            itemType: "speciality-frappe"
+        };
         
         // Menu data structure - edit this to update the menu
         const menuData = {
-            "hot-drinks": {
-                        "title": "Hot Drinks",
-                        "categories": {
-                                    "coffee": {
-                                                "title": "Coffee",
-                                                "items": [
-                                                            {
-                                                                        "name": "Americano",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCtItg0nZY2GRAMAx6_u4xnLgc3Uia9JnMTKyh6YznlSQc099TV9EpoXldJrU2MnWI3PflMBM-iDAVZxAzy1wGNYHYj6Agqnx0a-C0NMd1gYpdv-qaiYMF8MZMzZJEtYl3mm9IpKwrKDnKIGaFksPJSy7Gpnkesk_-Q8ZFzA7bWwj__4nMluNk9vy05jcZW97rhauJCGRKU7xPE4gr2r-c93LIZj4UeKqWSmlW09tg=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+          "hot-drinks": {
+                    "title": "Hot Drinks",
+                    "categories": {
+                              "coffee": {
+                                        "title": "Coffee",
+                                        "items": [
+                                                  {
+                                                            "name": "Latte",
+                                                            "image": "https://u.cubeupload.com/ryanjhope/1221.png",
+                                                            "description": "Smooth espresso with steamed milk.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Cappuccino",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAd97Iu9ySgjfMLAH2NjmuYR287N1MNkL5FzAbSb8F9SoD0gc51HWlLkV2XZh0GbER9enaFPopDlQsTisZZG0nAOe9y4QMh_pRUssAY7vTK_SfP88kGjCOQLR68E2Im4xnyavq11O09UXjayEJ7c8edsl7MqL6UAEvPwXPh0xzfygrtSfNO3LssmcX3FHuIFX3z8CW5syp87pWTa1p9lVHuD9nGAMSkwTtSk4KQF2g=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Cappuccino",
+                                                            "image": "https://u.cubeupload.com/ryanjhope/c342.png",
+                                                            "description": "Espresso topped with airy milk foam.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Latte",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAEDGTbERk2dxJBGCfh7ilWGinJTerD39ukiNHiId9RnQPTBGq3wwxPmz8UZxmTNhlkRRH0T6Cie5QJtvZ8mM8YQ-MgJsYSI0GmmHl8U1oX0h9KgZGWY8jgs-PANQbfqZFnD99WY14uxEz2M_TTeYLssD52jYA44eB5xSQ7Srf3yKWpIz-CUn18nUDJVRVcjPu1e5S6ZbDHv2Q78NxEv0D5sXuw-EVxcSUE1CTsaPY=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Americano",
+                                                            "image": "https://u.cubeupload.com/ryanjhope/54f3.png",
+                                                            "description": "Rich espresso lengthened with hot water.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Mocha",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAyT02ekie1LOKpnzwz1qEVgofDPVOg_r9Pc6p4X-cPSgrOglH2THf7nTjTbNamZV8bZlAoWOdcQFe_evAqFpgWRLU9ZunB1xqPNKsyMc0sL_SejkRLtusZfUqqiNuJAXNzvyQ4ohyp8uGewfrDXGeZQmn7PemZVGk1M6NC5q6GLHuWCnuC6dFGUE8ij6480fneiy33cW5B_PvoqZobJ5xbglhUVA1LZXcNAd4RCnY=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Mocha",
+                                                            "image": "https://u.cubeupload.com/ryanjhope/5074.png",
+                                                            "description": "Espresso, milk, and chocolate.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Flat White",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUC3ohBcKJMsTm6I6DfV1ydb4cM9UQMGG6HoW8oMMjKJn4lLr-W8a40_vcheFw8H-wMdtgHvG77AlF0SQJSeW_2YCdDfmlWR41ugNMzslE6HD_NxHVpM7n3dFMvAZF_ABrDyU0OHFF7FlM7kmsikDROIZmNynJWVD6b9FxSSkSAYLAIWSBjfHScFc7PEZVbNrLPk77nvDGNTax-KMSoSC6Lf6lT9hnIjfm-gkyMGHX8=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Flat White",
+                                                            "image": "https://u.cubeupload.com/ryanjhope/f645.png",
+                                                            "description": "Velvety espresso with steamed milk.",
+                                                            "sizes": [
+                                                                      "Regular"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0
                                                             },
-                                                            {
-                                                                        "name": "Espresso",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCWjeIOeINSQO8Sn2ZHNBwZ3Y5VeBEQzap3nBptmbIjEmWMz2NtJGNVr08WZFW3t7YTx705JDNp0C0XU5CnAYbCaIYbBtrleqmW1V-VCiD2pt1fpUMxfx8-DY9cMGHe8v6x9RNyZrbiV-_2s8qtvzMWzn0vbuvg5y4thpHxW83XYUcwwHvYaUzTF1YEryEz_o_ASG1MUrmei7yTf6Eq3MRipnaVaftjEkgqMiOJ=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "specialty-lattes": {
-                                                "title": "Specialty Lattes",
-                                                "items": [
-                                                            {
-                                                                        "name": "Pumpkin Spiced Latte",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAWNNWS1fpL7s0ae9AfW1BdsBDkfDk98PK1Q3s579lxopDGyp_sYfBipeDJ4q6gUF5TVgyXk1TrWFyvES35dsRqljsBX3CC_9IWgoJ1ikLGd2qO0OQKF8RxGOF9oOAFGe9wwGkLEL4SPJpG0EkthkDisp7DJa606XL9Z1XE7Gs-qXAHN2CAuLw8PnD-s8H2YG0Qf8ADcTxbdx_-uUSVO19dscB9mXKz9R89VTX4-G4=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": true,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Espresso",
+                                                            "image": "https://u.cubeupload.com/ryanjhope/68e6.png",
+                                                            "description": "A short, bold coffee shot.",
+                                                            "sizes": [
+                                                                      "Regular"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0
                                                             },
-                                                            {
-                                                                        "name": "Matcha Latte",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAVBpFKY0s7ievPbyLqo0vNlzu-kaVcWV0oJspLGYwL2bRRoO9aLgVfmqLzsaNzGFdC6ZGHSJytpF48XFaX5NtnkBQRgXQazdrNwdH7QoFMEBsf1hDKzoQatjpHM1OWbn4hpfq8uaHTggEsYZau8GUwZnrs8DXaJKKywCPtKdmBDOxvGJCwmj15Jm3yuo-VePncHPzK6Lo9Ng3_tyznpQ1LKBy5ovbQlHTGj6gOBTY=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": true,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "specialty-lattes": {
+                                        "title": "Specialty Lattes",
+                                        "items": [
+                                                  {
+                                                            "name": "Pumpkin Spiced Latte",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAWNNWS1fpL7s0ae9AfW1BdsBDkfDk98PK1Q3s579lxopDGyp_sYfBipeDJ4q6gUF5TVgyXk1TrWFyvES35dsRqljsBX3CC_9IWgoJ1ikLGd2qO0OQKF8RxGOF9oOAFGe9wwGkLEL4SPJpG0EkthkDisp7DJa606XL9Z1XE7Gs-qXAHN2CAuLw8PnD-s8H2YG0Qf8ADcTxbdx_-uUSVO19dscB9mXKz9R89VTX4-G4=w1280",
+                                                            "description": "A cosy latte with pumpkin spice.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Chai Tea Latte",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDQWk47x0dqqSis5vY9DHvjGXvFN8XBSGn7fpzFm31zEz8-d9zF_JA9pQYm2tvhxcHDzJqdV9pT0kOlIONXZtiPXijJFQFnaqs-Jg3jIhJzMNg2LUobNGI3ui00lNE5xvqPXlAkbZNUwgbB90J8YtyC_qrtgtB_khF9UHslVHGKsHKDe_VSRvcT8uKV7DhQjT97oX_xQeskZHWHqWJ_MFU-UuXe0NKalNt-upWV=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Matcha Latte",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAVBpFKY0s7ievPbyLqo0vNlzu-kaVcWV0oJspLGYwL2bRRoO9aLgVfmqLzsaNzGFdC6ZGHSJytpF48XFaX5NtnkBQRgXQazdrNwdH7QoFMEBsf1hDKzoQatjpHM1OWbn4hpfq8uaHTggEsYZau8GUwZnrs8DXaJKKywCPtKdmBDOxvGJCwmj15Jm3yuo-VePncHPzK6Lo9Ng3_tyznpQ1LKBy5ovbQlHTGj6gOBTY=w1280",
+                                                            "description": "Creamy milk blended with matcha.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Butterscotch Latte",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAsd1fKA0zVjXORImFgFTDBatERC6UpVWcINUSGPNcUOHR1AW2K0cP0uKYa6hePKhbl5P-ByNT3wUjnhgVpvWY8zldPPka5yv657o4ga3FJe_vFVa6IrYVdjYQp0C1Ia6_2XBKnqbxO0XbvYelJWDO_xf-ram5fUEH_POpbBbrwdxCh5W_ep-R0DxBENGzV_v_Ac7WfKcKD6n5tFXngshAi3Fmy2ypKB-uAxJbALk0=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Chai Tea Latte",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDQWk47x0dqqSis5vY9DHvjGXvFN8XBSGn7fpzFm31zEz8-d9zF_JA9pQYm2tvhxcHDzJqdV9pT0kOlIONXZtiPXijJFQFnaqs-Jg3jIhJzMNg2LUobNGI3ui00lNE5xvqPXlAkbZNUwgbB90J8YtyC_qrtgtB_khF9UHslVHGKsHKDe_VSRvcT8uKV7DhQjT97oX_xQeskZHWHqWJ_MFU-UuXe0NKalNt-upWV=w1280",
+                                                            "description": "Spiced chai with steamed milk.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Pistachio Cream Latte",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDN5eeRXAmu04AwZeFgZf9URyaijHTlfWJU3r_Rt8EIewg_VH84-mWDoG9SwWJnpBQ7xojdoaxy9aFHgwe3BmmjUbvDsJ6vEPo8oA0tsKvhXwFkXwISyUfKt61bK1S7zCUbNZGdw9Rgvy6EMrBQSgITtSwRKMAhf_ADyHCRdfLtF1dXsH1E1g5K3GGrFskIOWhn2OeQgBDqmI8uWJdKvBjI7Cb7_AjpiXVYVjdvgo0=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Butterscotch Latte",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAsd1fKA0zVjXORImFgFTDBatERC6UpVWcINUSGPNcUOHR1AW2K0cP0uKYa6hePKhbl5P-ByNT3wUjnhgVpvWY8zldPPka5yv657o4ga3FJe_vFVa6IrYVdjYQp0C1Ia6_2XBKnqbxO0XbvYelJWDO_xf-ram5fUEH_POpbBbrwdxCh5W_ep-R0DxBENGzV_v_Ac7WfKcKD6n5tFXngshAi3Fmy2ypKB-uAxJbALk0=w1280",
+                                                            "description": "A sweet latte with butterscotch.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Gingerbread Crumb Latte",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCGjhBJ2ZfPKTDerVc7dfpA4gDGHCTvnPEXnhfXWPIwYtQqId-Q9igEerUr082Bfg8ATtM-jXDPEcZS3UGtAx2GUX9KXZarbJsboJ3BB6NyBa_UhrtdYwYzam6gsvTUA--jycFnUUkbbUmphXOlTcav9CkHM_xEztqySJC-pff1vLNrlLb3gKb1JlyljPPQEC1JydNSr3TXCR8MtzmeHk9B88xy-fSEBIf_3e87iUU=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Pistachio Cream Latte",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDN5eeRXAmu04AwZeFgZf9URyaijHTlfWJU3r_Rt8EIewg_VH84-mWDoG9SwWJnpBQ7xojdoaxy9aFHgwe3BmmjUbvDsJ6vEPo8oA0tsKvhXwFkXwISyUfKt61bK1S7zCUbNZGdw9Rgvy6EMrBQSgITtSwRKMAhf_ADyHCRdfLtF1dXsH1E1g5K3GGrFskIOWhn2OeQgBDqmI8uWJdKvBjI7Cb7_AjpiXVYVjdvgo0=w1280",
+                                                            "description": "Creamy latte with pistachio flavour.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Banana & Carmel Latte",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBZ5l8K7tegmgCI3q8FN8KRcwALO2whso5apkfDRzBXa1jJdUU-CIzrM8kY_ie70tKJtxQydWRynkWmdwW0qzSC3NLAiys53wYCehdhK3AFiG0eVkTVwafizlJeCpx2iNhbjNDdZecsXb1Z_0iGodITA8XchILCS3GDHfxloWJto9fL6z1R3xRdRGkBU0lovBx15ZwBeJRvQmI0ECbmDgYJ-2ImZ-HEzbxuwxa1=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "matcha": {
-                                                "title": "Matcha",
-                                                "items": [
-                                                            {
-                                                                        "name": "Strawberry Matcha",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBjKekN6w0jNNgS7QkRZ1qoJMdAB0hVPti-KriotjNC-2eJE5wS_Hu9hLZVL2IbtRJluRw7ugHUUB9MfbrW7Y5vm2vWs-Pe56FSV_7mFmuhHFyNfos4VlhKuZQMEIljKjw4HGVQ3nJlC5K65w2iVSiPLrRTCYMlVX9-M61A5iKJKz67-4o2v_DXVRRm6Dpw0i0UJ5YOFtH7vdN9YVzB1yELT4YsreTMuAq1gzV6=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Gingerbread Crumb Latte",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCGjhBJ2ZfPKTDerVc7dfpA4gDGHCTvnPEXnhfXWPIwYtQqId-Q9igEerUr082Bfg8ATtM-jXDPEcZS3UGtAx2GUX9KXZarbJsboJ3BB6NyBa_UhrtdYwYzam6gsvTUA--jycFnUUkbbUmphXOlTcav9CkHM_xEztqySJC-pff1vLNrlLb3gKb1JlyljPPQEC1JydNSr3TXCR8MtzmeHk9B88xy-fSEBIf_3e87iUU=w1280",
+                                                            "description": "A warming latte with gingerbread notes.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Mango Matcha",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBjKekN6w0jNNgS7QkRZ1qoJMdAB0hVPti-KriotjNC-2eJE5wS_Hu9hLZVL2IbtRJluRw7ugHUUB9MfbrW7Y5vm2vWs-Pe56FSV_7mFmuhHFyNfos4VlhKuZQMEIljKjw4HGVQ3nJlC5K65w2iVSiPLrRTCYMlVX9-M61A5iKJKz67-4o2v_DXVRRm6Dpw0i0UJ5YOFtH7vdN9YVzB1yELT4YsreTMuAq1gzV6=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Banana & Carmel Latte",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBZ5l8K7tegmgCI3q8FN8KRcwALO2whso5apkfDRzBXa1jJdUU-CIzrM8kY_ie70tKJtxQydWRynkWmdwW0qzSC3NLAiys53wYCehdhK3AFiG0eVkTVwafizlJeCpx2iNhbjNDdZecsXb1Z_0iGodITA8XchILCS3GDHfxloWJto9fL6z1R3xRdRGkBU0lovBx15ZwBeJRvQmI0ECbmDgYJ-2ImZ-HEzbxuwxa1=w1280",
+                                                            "description": "A sweet banana and caramel latte.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Blueberry Matcha",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBjKekN6w0jNNgS7QkRZ1qoJMdAB0hVPti-KriotjNC-2eJE5wS_Hu9hLZVL2IbtRJluRw7ugHUUB9MfbrW7Y5vm2vWs-Pe56FSV_7mFmuhHFyNfos4VlhKuZQMEIljKjw4HGVQ3nJlC5K65w2iVSiPLrRTCYMlVX9-M61A5iKJKz67-4o2v_DXVRRm6Dpw0i0UJ5YOFtH7vdN9YVzB1yELT4YsreTMuAq1gzV6=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "matcha": {
+                                        "title": "Matcha",
+                                        "items": [
+                                                  {
+                                                            "name": "Strawberry Matcha",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBjKekN6w0jNNgS7QkRZ1qoJMdAB0hVPti-KriotjNC-2eJE5wS_Hu9hLZVL2IbtRJluRw7ugHUUB9MfbrW7Y5vm2vWs-Pe56FSV_7mFmuhHFyNfos4VlhKuZQMEIljKjw4HGVQ3nJlC5K65w2iVSiPLrRTCYMlVX9-M61A5iKJKz67-4o2v_DXVRRm6Dpw0i0UJ5YOFtH7vdN9YVzB1yELT4YsreTMuAq1gzV6=w1280",
+                                                            "description": "Matcha with a strawberry finish.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Pumpkin Matcha",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBjKekN6w0jNNgS7QkRZ1qoJMdAB0hVPti-KriotjNC-2eJE5wS_Hu9hLZVL2IbtRJluRw7ugHUUB9MfbrW7Y5vm2vWs-Pe56FSV_7mFmuhHFyNfos4VlhKuZQMEIljKjw4HGVQ3nJlC5K65w2iVSiPLrRTCYMlVX9-M61A5iKJKz67-4o2v_DXVRRm6Dpw0i0UJ5YOFtH7vdN9YVzB1yELT4YsreTMuAq1gzV6=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "hot-chocolate": {
-                                                "title": "Hot Chocolate",
-                                                "items": [
-                                                            {
-                                                                        "name": "Classic Hot Choclate",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCQTeejQV6OPNRnR2Jys7ucLpywJs12CHQJogUXgoi6Kj12Y9lNaIYu7WzEHeKGj9oW7wXP3elGPEUiwoKwJDM8sMg21bRlVkJ9AnslP3jrKKQStPIizAJ2xxHkR-kGYMu_FcD7rs0azzdU1Hao-wX_EOVSN9iLY3_GaS7I-CC-cH8UJc6XtJ3EFCAcmZA9AMWqkqJuesZiufY2rgEFUSV5br7jiDqWf-C4YEOg=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Mango Matcha",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBjKekN6w0jNNgS7QkRZ1qoJMdAB0hVPti-KriotjNC-2eJE5wS_Hu9hLZVL2IbtRJluRw7ugHUUB9MfbrW7Y5vm2vWs-Pe56FSV_7mFmuhHFyNfos4VlhKuZQMEIljKjw4HGVQ3nJlC5K65w2iVSiPLrRTCYMlVX9-M61A5iKJKz67-4o2v_DXVRRm6Dpw0i0UJ5YOFtH7vdN9YVzB1yELT4YsreTMuAq1gzV6=w1280",
+                                                            "description": "Matcha with a bright mango twist.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Salted Caramel",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAPgiI_Yi8XYfsbKsN6mN6EiMyjKb1nwuAEM-iful9cHKshxvt9iqa0-xqGLZ_Aa3MqnL9wq86JZPqa9jDxmaj1U3IxCGKb-KPs-4RgUHMXyzSBZ-uDhlX_s-YGBvO1hfGdFWAI3aoVKZT91RJ03kobI2VfPZ9ZF-ygwvgeU3nYhmwNMb6DoXZO6GUoicG80VqTpm6LuGI9LsLbKSXZBRaP-AzghOZ3JfisV0M_bCc=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Blueberry Matcha",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBjKekN6w0jNNgS7QkRZ1qoJMdAB0hVPti-KriotjNC-2eJE5wS_Hu9hLZVL2IbtRJluRw7ugHUUB9MfbrW7Y5vm2vWs-Pe56FSV_7mFmuhHFyNfos4VlhKuZQMEIljKjw4HGVQ3nJlC5K65w2iVSiPLrRTCYMlVX9-M61A5iKJKz67-4o2v_DXVRRm6Dpw0i0UJ5YOFtH7vdN9YVzB1yELT4YsreTMuAq1gzV6=w1280",
+                                                            "description": "Matcha with blueberry sweetness.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Kinder Bueno",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUALdnuLiGpBB9oM8NusO7wfy1aFPF2zhaVENZYxDrqS_OTmNSr3nPBFPF4XN3ee9OCIYl1mCUwgYf5tqVGFhuMQo056cAR_AxyvaLK4NXWTpgDssceMPA5kgM8tS_uOEXt5Ve2L_w5rSXF8tddRSpEmu1Sr7dP8Qlfs1hboQjzn5jJTjp2igJWtw2oL_COr80rX0tWSrNpWO1U6CLNrAHVZzOuPFsJBhuvMQajZ=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Pumpkin Matcha",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBjKekN6w0jNNgS7QkRZ1qoJMdAB0hVPti-KriotjNC-2eJE5wS_Hu9hLZVL2IbtRJluRw7ugHUUB9MfbrW7Y5vm2vWs-Pe56FSV_7mFmuhHFyNfos4VlhKuZQMEIljKjw4HGVQ3nJlC5K65w2iVSiPLrRTCYMlVX9-M61A5iKJKz67-4o2v_DXVRRm6Dpw0i0UJ5YOFtH7vdN9YVzB1yELT4YsreTMuAq1gzV6=w1280",
+                                                            "description": "Matcha with gentle pumpkin spice.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Oreo Crumb",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAk_-tc-1TjySoPI5nMxOCNyx_inlnxuyYKkO9bCtErHAkK1tyTZeGKYRznaoUimUD9NQSRMcI25s7765NZfpHMOcmUbRDvVBf-8HuGw-zDpeDB_ISswUhvu2NRvNlVo9hdlXGuRokksHKoILngHrRhw2CM_oW4FSVJCMji6VOM1w07zKEJLq8TDIVNWrim2KRwBNLFO9Z2WMvNvMFaXqnusjxfj6D3aPey2oEL=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "hot-chocolate": {
+                                        "title": "Hot Chocolate",
+                                        "items": [
+                                                  {
+                                                            "name": "Classic Hot Choclate",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCQTeejQV6OPNRnR2Jys7ucLpywJs12CHQJogUXgoi6Kj12Y9lNaIYu7WzEHeKGj9oW7wXP3elGPEUiwoKwJDM8sMg21bRlVkJ9AnslP3jrKKQStPIizAJ2xxHkR-kGYMu_FcD7rs0azzdU1Hao-wX_EOVSN9iLY3_GaS7I-CC-cH8UJc6XtJ3EFCAcmZA9AMWqkqJuesZiufY2rgEFUSV5br7jiDqWf-C4YEOg=w1280",
+                                                            "description": "Rich, classic hot chocolate.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Cherry Crumble",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBgV0D1fvqjtL1ollJ9ejV3XoAKIuACNZGgrlj5Naouq073_lq6SkRaXQUYPr4RTuKWUz_ib8NCERrcUZKCJmtpfGIa3XD9eskgGf5Y1FTPJ1bPuriMuhEP32VzCvWhRO-5YakshftotDrNSwKvH_7F1_hY-kEzlFM-IJFJZhzmBJF1jJNByBp_S-bd8D9xjshPJd9Zr1qOECui_p1Lgn71a6mtce58u9nxe_Lr=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Salted Caramel",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAPgiI_Yi8XYfsbKsN6mN6EiMyjKb1nwuAEM-iful9cHKshxvt9iqa0-xqGLZ_Aa3MqnL9wq86JZPqa9jDxmaj1U3IxCGKb-KPs-4RgUHMXyzSBZ-uDhlX_s-YGBvO1hfGdFWAI3aoVKZT91RJ03kobI2VfPZ9ZF-ygwvgeU3nYhmwNMb6DoXZO6GUoicG80VqTpm6LuGI9LsLbKSXZBRaP-AzghOZ3JfisV0M_bCc=w1280",
+                                                            "description": "Hot chocolate with salted caramel.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Banoffee",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCgrYgKqMtx6LcEW3Bn7wLIXZTYTN7CN_MRSiQzUF28i2CcGhWMZX_yQepzMk33wuw54eq-dWnLxFOjINXmGP_pphKLvcOtchn-CLYBAx5yY9HszGPVoxtN5QyPiZ_n1Ug5Pa1O9jyDKoZCrFT2tArstyeD4yYfJiY9VvF95_KVMu9Sop1bcT9HCm9mtVKUY4iQLQVfonlaTql9PvGA-dcjFLs6P10f5whyntHx=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    }
-                        }
-            },
-            "cold-drinks": {
-                        "title": "Cold Drinks",
-                        "categories": {
-                                    "matcha": {
-                                                "title": "Matcha",
-                                                "items": [
-                                                            {
-                                                                        "name": "Strawberry Matcha",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCy14WJaGTkv4KPZqRkmeFuU4Wjyq9EynpeTFFjZd1iMSZQ36fDr2D2ythm18xlF4bBcN6NYwzW18C9cB-PyPmbx_VZeQJARras-VhRWeHGQdTisUCXvhX82beg9KPIpmbvwYJcANgSnjxa2Z5BnuIPhVoB_afHnPIX9a0YMPBDXz8Nelt--Mhnx_INAROSvD0bhEyFj940vkahAbmkUBnqTx0xqsYg54KZsKTeIjg=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Kinder Bueno",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUALdnuLiGpBB9oM8NusO7wfy1aFPF2zhaVENZYxDrqS_OTmNSr3nPBFPF4XN3ee9OCIYl1mCUwgYf5tqVGFhuMQo056cAR_AxyvaLK4NXWTpgDssceMPA5kgM8tS_uOEXt5Ve2L_w5rSXF8tddRSpEmu1Sr7dP8Qlfs1hboQjzn5jJTjp2igJWtw2oL_COr80rX0tWSrNpWO1U6CLNrAHVZzOuPFsJBhuvMQajZ=w1280",
+                                                            "description": "Hot chocolate with Kinder Bueno flavour.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Mango Matcha",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDPX82cy1dFOutCF_f7gT9dn2NQxVVQSj1k_cxFvRPMLER3QiczW3-QmKMrWWpjLxteGvNppI1mUcMbyBCY2krzjRYqowuFOPQ68q3oOk6YJ7lZqfrjPLznTKMWRJFkq43XjdLpj-bRkKaZapIpPUdPd9e1yQXE_PqU1_NlxfAy2N_7czq_YfTJCoa6un5CmoD0KxlsD1xhpXwL66ku1xQQWgC_0ppmOZhJUN5o=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Oreo Crumb",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAk_-tc-1TjySoPI5nMxOCNyx_inlnxuyYKkO9bCtErHAkK1tyTZeGKYRznaoUimUD9NQSRMcI25s7765NZfpHMOcmUbRDvVBf-8HuGw-zDpeDB_ISswUhvu2NRvNlVo9hdlXGuRokksHKoILngHrRhw2CM_oW4FSVJCMji6VOM1w07zKEJLq8TDIVNWrim2KRwBNLFO9Z2WMvNvMFaXqnusjxfj6D3aPey2oEL=w1280",
+                                                            "description": "Hot chocolate with Oreo crumb.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Blueberry Matcha",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAlKMNp88HUOvpjHmK7QMsD-0cPzs-Oi8XWmyGGJFZqR1aAE4JvRV8bvGLEYFFbBIx2CzEPI3PgXZ7eyhbQ3R8Jjdsylqme4VUv0LPFnO6-H-Gis8OF-aUDoXRyiLnOPGCGfR5SorhhazWTbwDvY45mpu7VXXmMX2qqLELGZHLLm8gPZNJTaA_W3SWKH4LmSs56xT7PW93Vy6VwwLvSWgpcEQQB059ChC_7Stkh-sQ=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Cherry Crumble",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBgV0D1fvqjtL1ollJ9ejV3XoAKIuACNZGgrlj5Naouq073_lq6SkRaXQUYPr4RTuKWUz_ib8NCERrcUZKCJmtpfGIa3XD9eskgGf5Y1FTPJ1bPuriMuhEP32VzCvWhRO-5YakshftotDrNSwKvH_7F1_hY-kEzlFM-IJFJZhzmBJF1jJNByBp_S-bd8D9xjshPJd9Zr1qOECui_p1Lgn71a6mtce58u9nxe_Lr=w1280",
+                                                            "description": "Hot chocolate with cherry crumble notes.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Pumpkin Matcah",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAzSDlXm4hGpx1ssqAe0VtdZckgKFAi-G9zWDWkLkGyvOzn4FV5MbQuGSkLYZdVWLmvIbZqNTt-Oo-sFmprKRFJNv4eYEIO9_uhX36NRMy0jndzyNDrla4EewobjibHOUR1zIC7iRgD4_fvYvuKnMeT9FAaqy4BjoBQhz1tAZNpR3tYeqkppnSsnrOfArX4I3FCv47HJqWHsEG1QIsGcKPz5v8hnWD3i9YZctPP=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "iced-coffee": {
-                                                "title": "Iced Coffee",
-                                                "items": [
-                                                            {
-                                                                        "name": "Iced Americano",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCxxF9gCPc3ofG2WgBRKqmXNyNzpzQY-0BGIA1M16xaXPEhEPqoF6TkLpJkvFx1GxQA8DkNJL6XbP9J1H63HPOF6au3C5jRZmqTL9Enabft5I2Xe0SXh7JRQBPPVKm03ZLojZNar7M-Yo_ljc6SWa4-CnNzU4__5wtj8pPTaPCN3VGwyBUV-C9DfRszUKhJAFUe-dmjs8OuMEyxNcvOR5sq5LXGQqMiL8Um3p9F26s=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Banoffee",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCgrYgKqMtx6LcEW3Bn7wLIXZTYTN7CN_MRSiQzUF28i2CcGhWMZX_yQepzMk33wuw54eq-dWnLxFOjINXmGP_pphKLvcOtchn-CLYBAx5yY9HszGPVoxtN5QyPiZ_n1Ug5Pa1O9jyDKoZCrFT2tArstyeD4yYfJiY9VvF95_KVMu9Sop1bcT9HCm9mtVKUY4iQLQVfonlaTql9PvGA-dcjFLs6P10f5whyntHx=w1280",
+                                                            "description": "Hot chocolate with banana and toffee.",
+                                                            "sizes": [
+                                                                      "Small",
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Small": 0,
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Iced Latte",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDv3f2UGONDUAiSzN5nPA_zGlVg-EjVpBerwZj96uDxmHXiwfzi84WJOcMCWMavPlVGdOEqdMJ9A_mLzBw6J8R4RZsmyzfR7Lj8Kn8SlJAVkVUNI6GC2lfFqX8DgeuWVPCdC7HFpeNXRo2hU6NbKjAZMBuRv0m1vPMN60LKF-AQYY1bT_j_DFEDNnOq3VnkhuXoWrKU7QEtNedGWCBjDUX5Tnd4Nds8g_CWArFtCMY=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              }
+                    }
+          },
+          "cold-drinks": {
+                    "title": "Cold Drinks",
+                    "categories": {
+                              "matcha": {
+                                        "title": "Matcha",
+                                        "items": [
+                                                  {
+                                                            "name": "Strawberry Matcha",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCy14WJaGTkv4KPZqRkmeFuU4Wjyq9EynpeTFFjZd1iMSZQ36fDr2D2ythm18xlF4bBcN6NYwzW18C9cB-PyPmbx_VZeQJARras-VhRWeHGQdTisUCXvhX82beg9KPIpmbvwYJcANgSnjxa2Z5BnuIPhVoB_afHnPIX9a0YMPBDXz8Nelt--Mhnx_INAROSvD0bhEyFj940vkahAbmkUBnqTx0xqsYg54KZsKTeIjg=w1280",
+                                                            "description": "Iced matcha with strawberry flavour.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Iced Mocha",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAeMr0n2r8tN7znAJE9f5bvko3dRlmFCijDjs6rCRGjEDkXq54eWwtkWd4j2y1Wjkb8J-u5SmZLDYQWUXNam_hIMV-VPIIHFafZZyLXSeSlScllcnwd2AwvQJzsEoqYnmTF-X_P1JGovjeA5eSd9sQzB-75HQCSOpWUX-55iw_HLKHkm24n61R_Opmc02Ar1ScTpiW11hdxYtXTyrUxJ_Et4VeEKYhOckCcXzr2E6o=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Mango Matcha",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDPX82cy1dFOutCF_f7gT9dn2NQxVVQSj1k_cxFvRPMLER3QiczW3-QmKMrWWpjLxteGvNppI1mUcMbyBCY2krzjRYqowuFOPQ68q3oOk6YJ7lZqfrjPLznTKMWRJFkq43XjdLpj-bRkKaZapIpPUdPd9e1yQXE_PqU1_NlxfAy2N_7czq_YfTJCoa6un5CmoD0KxlsD1xhpXwL66ku1xQQWgC_0ppmOZhJUN5o=w1280",
+                                                            "description": "Iced matcha with mango flavour.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Caramel Frappe",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAzFSLdpbNL6-UUMZnUllpZDlHMQoWDU28HOqm-30vYiLjel5wNXSY2dYqpihootkW0wMPPm9YoFeU2QF-Iw3q6FgCPjDSaCyOpk4RpoCWpjwzTKyB_IHOk8NStoFumoFC6n47pGKD-aRIaVzE20_6H1Cd0fvxxz6R_Thu4i2PZbfEXDDybV7zdU9RAJ-C5xO622KtsUxbuL2t7JaauDiSXMWOAFUM96kEPasUOw2A=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Blueberry Matcha",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAlKMNp88HUOvpjHmK7QMsD-0cPzs-Oi8XWmyGGJFZqR1aAE4JvRV8bvGLEYFFbBIx2CzEPI3PgXZ7eyhbQ3R8Jjdsylqme4VUv0LPFnO6-H-Gis8OF-aUDoXRyiLnOPGCGfR5SorhhazWTbwDvY45mpu7VXXmMX2qqLELGZHLLm8gPZNJTaA_W3SWKH4LmSs56xT7PW93Vy6VwwLvSWgpcEQQB059ChC_7Stkh-sQ=w1280",
+                                                            "description": "Iced matcha with blueberry flavour.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Vanilla Frappe",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBlSYqhnHGJ0Ma0J7FZFo_rMQqdnCTzqAfDMWM6XDGVd7WacDRbPoEGcxuxGZjkat-4p-vUeOJCWJxYa5odduEM7yhTFEllrrFzrtBOjksdvLi30YQyMsms5XF2biMfxATjc4wZSUy8YYulK7N24c4LrMf3gCE43O_MTJVoq1faSShIGAjB4r6uxsJNNLmYYQxzA05YKybrh1XI4au2XFhTGqVcJiB99tzDh6CYcsM=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Pumpkin Matcah",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAzSDlXm4hGpx1ssqAe0VtdZckgKFAi-G9zWDWkLkGyvOzn4FV5MbQuGSkLYZdVWLmvIbZqNTt-Oo-sFmprKRFJNv4eYEIO9_uhX36NRMy0jndzyNDrla4EewobjibHOUR1zIC7iRgD4_fvYvuKnMeT9FAaqy4BjoBQhz1tAZNpR3tYeqkppnSsnrOfArX4I3FCv47HJqWHsEG1QIsGcKPz5v8hnWD3i9YZctPP=w1280",
+                                                            "description": "Iced matcha with pumpkin spice.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Mocha Frappe",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCIPgBp5oTLu8gwCbnqOWRgpuxTji5IhPumpSvEq9yHdL-zP5zL97xVZhXwDbcy_eiM7v4faiUTUCmg6-rSg3d4EBY-gHUuYD1bWZ5C6vUTcgFuR7nXMhOQlu1VAdR1cWx64ZPHma8MuI1q9cpnNYGd8tfcxqduVW-djre4WVmmzrqWlOlsDJENp_Mpn0qNSx6rVmziKfVoehenEdXdgsbc1qeyl2pBEDE3i71cyxQ=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "frappes": {
-                                                "title": "Frappes",
-                                                "items": [
-                                                            {
-                                                                        "name": "Kinder Bueno",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDMumQjOsNp8iyrk4z1sMyUDBgOU6gMQuAEOaC-1JI-b72Sn6soOHIbG8vIscGhosJTQON246zSwz0Cnx0ILYKfComYfYplEHDAWkPQeYSYwOiIItCPP77I3wh7g4GyUBoM5dmJtvSe8QVw3LnI7hX1EfZU26KRvWQmfOwCam9A74eYvPSofOKJ61QuB0HHHF32gDiio1i583AD7Cc5AFbCm_PedUEgO6yMggC3=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "iced-coffee": {
+                                        "title": "Iced Coffee",
+                                        "items": [
+                                                  {
+                                                            "name": "Iced Americano",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCxxF9gCPc3ofG2WgBRKqmXNyNzpzQY-0BGIA1M16xaXPEhEPqoF6TkLpJkvFx1GxQA8DkNJL6XbP9J1H63HPOF6au3C5jRZmqTL9Enabft5I2Xe0SXh7JRQBPPVKm03ZLojZNar7M-Yo_ljc6SWa4-CnNzU4__5wtj8pPTaPCN3VGwyBUV-C9DfRszUKhJAFUe-dmjs8OuMEyxNcvOR5sq5LXGQqMiL8Um3p9F26s=w1280",
+                                                            "description": "Chilled espresso with water.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Oreo Crumb",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDl4FXRnFLLEnDvA3qLabt-UL-LitYppWcz3E9pJtS06gq27RKoXYNnAM6Y7a6q83NN7WmOMaFsGiTqU9JgsX8EANKzb6QwE3fBP_0j3B3isdbqwzkL0mvVVPmk-Cch3GCMHMuaGik-519oCoQuPJoG79uhfahFmrdeOu7s_HDUv2NeY4TdZYEIufgpUUwf84Iv2Ut9GOR60UfFIcUWXh-ikuLgCHkL9DJOjrIvMOw=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Iced Latte",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDv3f2UGONDUAiSzN5nPA_zGlVg-EjVpBerwZj96uDxmHXiwfzi84WJOcMCWMavPlVGdOEqdMJ9A_mLzBw6J8R4RZsmyzfR7Lj8Kn8SlJAVkVUNI6GC2lfFqX8DgeuWVPCdC7HFpeNXRo2hU6NbKjAZMBuRv0m1vPMN60LKF-AQYY1bT_j_DFEDNnOq3VnkhuXoWrKU7QEtNedGWCBjDUX5Tnd4Nds8g_CWArFtCMY=w1280",
+                                                            "description": "Cold milk with espresso over ice.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Pistachio Cream",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBG48WUkekOkuKDaAzb6i7XJE_6yJRL3v9K0CGMaiwe4jpZ3BQPppXB3TQAfchEVYWXYo2HnsDiNj4qO8aQ3kXoLBIvCDMmu81yBsPNiW9HwbHcJTsb4Y9DcaqDxPg-FRV-q0w4io3cVvuSKV7HNoayhJa_CT1AJxSkAuDbNebVKW9Xfd_xoD7HAj8vLNowdsrcFIusWd70mxLzWZ1ZOJldE6UzfVhCgnODB1CdFpw=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Iced Mocha",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAeMr0n2r8tN7znAJE9f5bvko3dRlmFCijDjs6rCRGjEDkXq54eWwtkWd4j2y1Wjkb8J-u5SmZLDYQWUXNam_hIMV-VPIIHFafZZyLXSeSlScllcnwd2AwvQJzsEoqYnmTF-X_P1JGovjeA5eSd9sQzB-75HQCSOpWUX-55iw_HLKHkm24n61R_Opmc02Ar1ScTpiW11hdxYtXTyrUxJ_Et4VeEKYhOckCcXzr2E6o=w1280",
+                                                            "description": "Iced coffee with chocolate.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Lotus Biscoff",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCVEQdKYeEgG9FTkOal03-Nf-GJSvDioXx_AobbY9QbFYtuX_6aY4jes9AY_5Kv1kwTlI1p69sQRzuYlq_agJy-T1Xy6uU3PGi1ufNQNX6u_eCv1vwx7Umbl3C9uKqS5PsDJVXEgE5Ei2_TbbgVhWU9yQfQQGBr18lYiJw6Knte_rrmbe9LtmabRDbJr85qnrejnTuMmFqUKOd45tCzgphwwqshRSrk5BtFXOxWflA=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Caramel Frappe",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAzFSLdpbNL6-UUMZnUllpZDlHMQoWDU28HOqm-30vYiLjel5wNXSY2dYqpihootkW0wMPPm9YoFeU2QF-Iw3q6FgCPjDSaCyOpk4RpoCWpjwzTKyB_IHOk8NStoFumoFC6n47pGKD-aRIaVzE20_6H1Cd0fvxxz6R_Thu4i2PZbfEXDDybV7zdU9RAJ-C5xO622KtsUxbuL2t7JaauDiSXMWOAFUM96kEPasUOw2A=w1280",
+                                                            "description": "Blended iced coffee with caramel.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Pumpkin Spiced",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBixP2_qIm7JSdQ4VitgdKEHnuKzZFgQmx-ihQKupNyAXsfrwvhEhJYz4AhfUNnXxxjkQE3CNakcLXF5pILLen3uMxjPLV6FH4RI-RSeu9XA26_n-MzOQzGmjyNn5C2dLcr3wm79FVr4ByfrZgF6Et42MTn0yBrh__iqK2WhIGbenwf0CkZSz6Py2Bjz5tGH_xiawa_W1zUYL0WILmkW3eGfxbD2ZxeWxL-kH6ip5s=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "shakes": {
-                                                "title": "Shakes",
-                                                "items": [
-                                                            {
-                                                                        "name": "Vanilla",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCmTCK42wWp23MzLqWRCAO5HtMBcZuCVddixk91O91jE1MMtvvuTjaBEppLToX4M5LtK0jBjEnqmSdSexWE98fCKMxuyzWGeSixdkk02DPgkPOK8zofaai1n6hDV7SUa4y0p3-AJB8iiCQ_ztzfcvbJr6GoiG94EeTtJHWXp5P6Z7rvlbM96sS1pPYloEYrhPfMBQtCf99eluI1pLWyTtoickCMawvm5_UrLMqAUJY=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Vanilla Frappe",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBlSYqhnHGJ0Ma0J7FZFo_rMQqdnCTzqAfDMWM6XDGVd7WacDRbPoEGcxuxGZjkat-4p-vUeOJCWJxYa5odduEM7yhTFEllrrFzrtBOjksdvLi30YQyMsms5XF2biMfxATjc4wZSUy8YYulK7N24c4LrMf3gCE43O_MTJVoq1faSShIGAjB4r6uxsJNNLmYYQxzA05YKybrh1XI4au2XFhTGqVcJiB99tzDh6CYcsM=w1280",
+                                                            "description": "Blended iced coffee with vanilla.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Choclate",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUByRjDNvNmIbFJusb3i3OcLAQ4OxnUTMQk3k8VkdUpI8x7W95wJOm9MQEHsPPl41rdBiUNfhjTQ_9iruECpugX8DTIkvn353_ZqYo92G7jPi8Wm7_N4qLx4I_ugaYwPEGJCWSZWpiyoMMzyMHokqfZ5Qd-umiPcz82vCMxJKCn4Ssub7UYs4HHZJUqG5U5vH1CTkttCGWrGFqd-l19G5125c5ECBeicr4zBNsWxqwg=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Mocha Frappe",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCIPgBp5oTLu8gwCbnqOWRgpuxTji5IhPumpSvEq9yHdL-zP5zL97xVZhXwDbcy_eiM7v4faiUTUCmg6-rSg3d4EBY-gHUuYD1bWZ5C6vUTcgFuR7nXMhOQlu1VAdR1cWx64ZPHma8MuI1q9cpnNYGd8tfcxqduVW-djre4WVmmzrqWlOlsDJENp_Mpn0qNSx6rVmziKfVoehenEdXdgsbc1qeyl2pBEDE3i71cyxQ=w1280",
+                                                            "description": "Blended iced coffee with chocolate.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Strawyberry",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCV6EAAUad4g_RPCVAbhWFpzT0wY61aVQMDSSDTwp_pm_FnGhBVPHaiQcdIGkMrp6AO-VjuDCQIbsB04p89nsvB7ROTypIGe_mO6A6AF2imolzFn-vS9FlnOYvnW9O1RYXH1JxahwBcRA65ox-don4n0FSdjGD2fY8ZZ_4IfjzeB-EpEGnx8WjO0yxpv0rAylwQ5Dzcv-6MSxMOay-HpsxgoII6xy-FpklgONFv=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "frappes": {
+                                        "title": "Frappes",
+                                        "items": [
+                                                  {
+                                                            "name": "Kinder Bueno",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDMumQjOsNp8iyrk4z1sMyUDBgOU6gMQuAEOaC-1JI-b72Sn6soOHIbG8vIscGhosJTQON246zSwz0Cnx0ILYKfComYfYplEHDAWkPQeYSYwOiIItCPP77I3wh7g4GyUBoM5dmJtvSe8QVw3LnI7hX1EfZU26KRvWQmfOwCam9A74eYvPSofOKJ61QuB0HHHF32gDiio1i583AD7Cc5AFbCm_PedUEgO6yMggC3=w1280",
+                                                            "description": "Blended frappe with Kinder Bueno flavour.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Salted Caramel",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAGCTsb68cfI9o6cqvMIh50v7AkDZ5gydEpDkIvZLCyl2DeGwdoN6FCMa_wWE88EabIdKb-pWdUHKD--YHjqVn0Ybl8brYh-XnwFUDdIX0QtMQnt5qbDqliXNVjsMIih77p-EZZbOaCIC5uJedMlclJzGOxhv4k1ndbeEGil5dJiYjCFOIsWW_FjTN4jb24RDDQfjIOtWXg8a4ae4-cDloWDQkqk76w56OuedWG=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Oreo Crumb",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDl4FXRnFLLEnDvA3qLabt-UL-LitYppWcz3E9pJtS06gq27RKoXYNnAM6Y7a6q83NN7WmOMaFsGiTqU9JgsX8EANKzb6QwE3fBP_0j3B3isdbqwzkL0mvVVPmk-Cch3GCMHMuaGik-519oCoQuPJoG79uhfahFmrdeOu7s_HDUv2NeY4TdZYEIufgpUUwf84Iv2Ut9GOR60UfFIcUWXh-ikuLgCHkL9DJOjrIvMOw=w1280",
+                                                            "description": "Blended frappe with Oreo crumb.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Banana & Caramel",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAVix90bpnN-bqq8jjp9sFD27yWcDcindJaq30juHDvufMqwicHwGS5zU4EbDelhbDKp9Xrnxy6JAoS8QE3Lku0IqIDxiIXyyqfjKfhP-_CuyVJNwksldrvYjwEHomXHkiESWIRhS3vFhQvuMOpk12J-gw4ZicBOz8GE6N7QceIg3VIy7fST8p1Fg7dIn69Gi3KSY5ABZ1zxNBxYQgom4Xw7qoeNoqVMlVoJGC7vTg=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "smoothies": {
-                                                "title": "Smoothies",
-                                                "items": [
-                                                            {
-                                                                        "name": "Reviving Hulk",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUA9cX0W4ZyooQ_yTkBqwe7vd-9sm133ITdDMPNKEg5knF0pUCXGdgkiBt43BH1z_ZQlwTOPI1t88xNOSCmnIXYwrNEzHSCABU5M22E1AoCUI8noc9S_kjJd9IFj0eJ05RI87vzaKmWeE_z0saba8TRjwI1vyBimlRkTFip8CY_j10AzgvK0Qzp_5bnNsJ6BlVWTIoQq3O9JREnQdKBZy4YI-HenFOzKQdVTQm6E=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Pistachio Cream",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBG48WUkekOkuKDaAzb6i7XJE_6yJRL3v9K0CGMaiwe4jpZ3BQPppXB3TQAfchEVYWXYo2HnsDiNj4qO8aQ3kXoLBIvCDMmu81yBsPNiW9HwbHcJTsb4Y9DcaqDxPg-FRV-q0w4io3cVvuSKV7HNoayhJa_CT1AJxSkAuDbNebVKW9Xfd_xoD7HAj8vLNowdsrcFIusWd70mxLzWZ1ZOJldE6UzfVhCgnODB1CdFpw=w1280",
+                                                            "description": "Blended frappe with pistachio cream.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Strawbana Bliss",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBSXWNmDzF5588MLK9nqseM6FAJ83-YKb-nW2eAxTs612XcL9dDrZyRObi0VVDwBw2llW3Hb015nZqOckeGXCzcqc0Xd3x8Wq4B2YHzLK9xAAfxLTzjktxGkhRKB4lCfRZnfj0MoqLiCDwkG76VrykbDgJMDdUxMJFftBEuKUC-9s2SiQmq6T65qqViKt2F7M3NfieAGqX2R9e7_c5qnM1dlPw2zYPcc8LpiDhcGfw=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Lotus Biscoff",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCVEQdKYeEgG9FTkOal03-Nf-GJSvDioXx_AobbY9QbFYtuX_6aY4jes9AY_5Kv1kwTlI1p69sQRzuYlq_agJy-T1Xy6uU3PGi1ufNQNX6u_eCv1vwx7Umbl3C9uKqS5PsDJVXEgE5Ei2_TbbgVhWU9yQfQQGBr18lYiJw6Knte_rrmbe9LtmabRDbJr85qnrejnTuMmFqUKOd45tCzgphwwqshRSrk5BtFXOxWflA=w1280",
+                                                            "description": "Blended frappe with Biscoff flavour.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Hawaiian Paradise",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDrZh7F1zN6LejoggYy239Nt-tbCqfDCz3d1wHX4FMzRHGccFIzKWbHrVtMizrnktJWkdu_3wUyjqdMGWNQiKXAfnoSxTgYLMr9ws17vPLbeRlO_GjVc9tQ_Afof0r_uPcC-3X9Bt-rwYjOMqoHdFdTC-fN_9Aegh3WEE_d2_8HgHpL-vU3d0EbdTiJtEU3UyxhcMhDjJLzj1eP4ZtDmvLP5vs_AdZrh5bqxqTBheo=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "lemonades": {
-                                                "title": "Lemonades",
-                                                "items": [
-                                                            {
-                                                                        "name": "Pineapple",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUB2iiXXbcilChsuOOJS0A4JzrSLC3I1jj1UGfv8cmzJ5OQt0054a9NG7paMi2GXIQxiGHQxZ4epKxix5AkeIAlUWY9W-vq28r25qUHg0XzyhBtRVXkygj5KS4hvGi6InHH3suxjyhHvkeDFLKBcRHdDJcj4m8KvWKBlkAmn8uhpSkRTX7TjHxfPfgMbVARlqW_Mpy91S5Y8JNhmbbjRof_41drspfnny-tEcqkk6oY=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Pumpkin Spiced",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBixP2_qIm7JSdQ4VitgdKEHnuKzZFgQmx-ihQKupNyAXsfrwvhEhJYz4AhfUNnXxxjkQE3CNakcLXF5pILLen3uMxjPLV6FH4RI-RSeu9XA26_n-MzOQzGmjyNn5C2dLcr3wm79FVr4ByfrZgF6Et42MTn0yBrh__iqK2WhIGbenwf0CkZSz6Py2Bjz5tGH_xiawa_W1zUYL0WILmkW3eGfxbD2ZxeWxL-kH6ip5s=w1280",
+                                                            "description": "Blended frappe with pumpkin spice.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Strawberry",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUD1fJN86Uv71j8WcdEGA72VN8yMakyKFgcR7DyBPOPPlfmoZlJmQdH-zAnQiORCDcllxf5UhA2exQGConf6NZprSNocZs2SRHmY60lozD-VObj0fvMgwb2DWV-rin_NjXBYID-LJOwthbcpB9e0jMV9I5ZqKF68I6SIDLvbaemplNop0_gG5kv9eIOoaya8ZOOds75_BM_2n_OM3_4HwM2-kbG6g0UEiiBlZtZN1xg=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "shakes": {
+                                        "title": "Shakes",
+                                        "items": [
+                                                  {
+                                                            "name": "Vanilla",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCmTCK42wWp23MzLqWRCAO5HtMBcZuCVddixk91O91jE1MMtvvuTjaBEppLToX4M5LtK0jBjEnqmSdSexWE98fCKMxuyzWGeSixdkk02DPgkPOK8zofaai1n6hDV7SUa4y0p3-AJB8iiCQ_ztzfcvbJr6GoiG94EeTtJHWXp5P6Z7rvlbM96sS1pPYloEYrhPfMBQtCf99eluI1pLWyTtoickCMawvm5_UrLMqAUJY=w1280",
+                                                            "description": "Creamy vanilla milkshake.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Peach Iced Tea",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUD9qfc1E2gxOR85s69F1kzvMZPzuhhwc-qul2QoejO4b6ThXURhGm3Hf8Io2Luhtj3JRHUkEA4ZBJK8kOXziArIYGwNzT1o5pBxJpAhyn8BXZnWwDh_UfzRLCrru5o1ks38i6Jv1oIjX4q1uF7pAEFlQn7X5fiFB3vQ5t0Lct5OWqhwcpKG4Gxgs9xphHHN0XOk8lw3PBPJjf__iB-zN1dlR6Wjz7P4X6VmpDVBpgQ=w1280",
-                                                                        "description": "Fully customisable with alternative milks, whipped cream, marshmallows, and sweet cold foam.",
-                                                                        "sizes": [
-                                                                                    "Regular"
-                                                                        ],
-                                                                        "prices": {
-                                                                                    "Regular": 0
-                                                                        },
-                                                                        "defaultSize": "Regular",
-                                                                        "singleSize": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    }
-                        }
-            },
-            "food": {
-                        "title": "Food",
-                        "categories": {
-                                    "toasted-half-cut-panini": {
-                                                "title": "Toasted Half Cut Panini",
-                                                "items": [
-                                                            {
-                                                                        "name": "Ham & Cheese",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUADK6viAW-vPbksikq_l4WNKbejT1iObT9b7EQ7UYpFaZVeJzrRiaSOX5v_Q9c6YYs4tW1y5moiOZVbKENib4D3soSxgg_oox7cDweUEqXuyLPWZVMHSnUVx0dk5toWE6chYISpL50XjPFJsbPGSPrIo5C29CBq5XYJ5dd6D5RMSnBYvlQ-EHKOBPpbwQwZ6g7_BK9TLGGjehsRNtX4d3PEuvy6HiV3pE5MsFqQ=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Choclate",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUByRjDNvNmIbFJusb3i3OcLAQ4OxnUTMQk3k8VkdUpI8x7W95wJOm9MQEHsPPl41rdBiUNfhjTQ_9iruECpugX8DTIkvn353_ZqYo92G7jPi8Wm7_N4qLx4I_ugaYwPEGJCWSZWpiyoMMzyMHokqfZ5Qd-umiPcz82vCMxJKCn4Ssub7UYs4HHZJUqG5U5vH1CTkttCGWrGFqd-l19G5125c5ECBeicr4zBNsWxqwg=w1280",
+                                                            "description": "Creamy chocolate milkshake.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Bacon & Mozzarella",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCKquDzU7G_3x9rI5LWUBlAtebR5iNp7txaDIOa7Y37-PUjMQOoCe_f6wrdSUN6slZ73A646ODmkjQbOQP8_JrvDci-GUDnCAbso5kZoSOUxLOKQGakaOCRNn2zs-23cWXqZqzuGqjtnqhRf02-sWwIVv__LEeWq5ADbTmwnA2QBS1dJC2B9-wY4TX0p8kemrctewmFZHHAE7iQQWEyDjTdlbLUnqNe-LPcqhiINU4=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Strawyberry",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCV6EAAUad4g_RPCVAbhWFpzT0wY61aVQMDSSDTwp_pm_FnGhBVPHaiQcdIGkMrp6AO-VjuDCQIbsB04p89nsvB7ROTypIGe_mO6A6AF2imolzFn-vS9FlnOYvnW9O1RYXH1JxahwBcRA65ox-don4n0FSdjGD2fY8ZZ_4IfjzeB-EpEGnx8WjO0yxpv0rAylwQ5Dzcv-6MSxMOay-HpsxgoII6xy-FpklgONFv=w1280",
+                                                            "description": "Creamy strawberry milkshake.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Pesto & Mozzarella",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBiTGO_TH9qRryiouwkokGVYZEI34WCme1-G45zVuQZZc3Sl_eOhG-J0Re4l6nJLJtC0pP1bJj6_aF6qeC-uB6x5-LWLdAUTw5qkWsFBVQ0pppqovWPiTgmDj74k8jUPrQUg_XvhW-Fqc9aK1FSXNcUnsx2qU6r8TmzvNh6ziqOjKDLgx929-fojRYa1FxZqQnshn19nTauicSCphgkdTGUHsD9LUHfAovtu2Wb=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Salted Caramel",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAGCTsb68cfI9o6cqvMIh50v7AkDZ5gydEpDkIvZLCyl2DeGwdoN6FCMa_wWE88EabIdKb-pWdUHKD--YHjqVn0Ybl8brYh-XnwFUDdIX0QtMQnt5qbDqliXNVjsMIih77p-EZZbOaCIC5uJedMlclJzGOxhv4k1ndbeEGil5dJiYjCFOIsWW_FjTN4jb24RDDQfjIOtWXg8a4ae4-cDloWDQkqk76w56OuedWG=w1280",
+                                                            "description": "Creamy salted caramel milkshake.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Tomato & Cheese",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDG1RgHyO3-Iw6sXmg7g930m7gCbAVvEEV1eQuCrWSVZQf312HzUYPzhHGIGwRNeyX_3YxYqhXfVow-ZClMAzu00e6zL8ew0SBeu7bu2ivNAKLf92iJep5_KQsn-XZ3tfqBxIPvo9Op8uwZgFqYCvB8mwtJsaYhzBO1tEXBdh7uuzAhitXPO6sYLd2QIRRCMegOhVxk0hmgyq3VaY1A4NMAr_MUh2RpT14-h0HX=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "filled-croissants": {
-                                                "title": "Filled Croissants",
-                                                "items": [
-                                                            {
-                                                                        "name": "Ham & Cheese",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCjJ0xymD0QaokQzLeBCHzmEZqvevcWg_yGWCevK4LCZlHEN225eu3Ol62xWb2_GkLYh3xfy1Kl8Y8ExS-A2g2Ndzr0hWtVbQ-G3Dyattv7lRZ7RZ5Y0lNx6tXigGm7BTRcvrGW6E6TnQEx2w9PPosMsrLxWDPJBV9I9gRJZBXF0J6YKACUBF7cvQ8TDsfwNVaXgex9UIVN0V4engCUibuUGbp4eV38k-T270WzD0E=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Banana & Caramel",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAVix90bpnN-bqq8jjp9sFD27yWcDcindJaq30juHDvufMqwicHwGS5zU4EbDelhbDKp9Xrnxy6JAoS8QE3Lku0IqIDxiIXyyqfjKfhP-_CuyVJNwksldrvYjwEHomXHkiESWIRhS3vFhQvuMOpk12J-gw4ZicBOz8GE6N7QceIg3VIy7fST8p1Fg7dIn69Gi3KSY5ABZ1zxNBxYQgom4Xw7qoeNoqVMlVoJGC7vTg=w1280",
+                                                            "description": "Creamy banana and caramel milkshake.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Bacon & Mozzarella",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBlqmWkcWw6ID52eh7ezvCuHQESZoV7HuEF0TL6HJ5vevqy74gPyCXdOHhYHo_H9t0ll4PqplX3BLrEISLogidIzZuC8dlywH14gW9QOpEDi1CkSVSE-bsss2Xj5MH4xUAEB8MOidUXxeKOghgrjPSTr5C4Jj67X1gLd5RkteKzYpw-v-gZC3yMrYlVqFhG8asxSl_2-jGJQPzdkwtaFHxCxY3K3LOT50QDwSufRUY=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "smoothies": {
+                                        "title": "Smoothies",
+                                        "items": [
+                                                  {
+                                                            "name": "Reviving Hulk",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUA9cX0W4ZyooQ_yTkBqwe7vd-9sm133ITdDMPNKEg5knF0pUCXGdgkiBt43BH1z_ZQlwTOPI1t88xNOSCmnIXYwrNEzHSCABU5M22E1AoCUI8noc9S_kjJd9IFj0eJ05RI87vzaKmWeE_z0saba8TRjwI1vyBimlRkTFip8CY_j10AzgvK0Qzp_5bnNsJ6BlVWTIoQq3O9JREnQdKBZy4YI-HenFOzKQdVTQm6E=w1280",
+                                                            "description": "A bright, refreshing smoothie.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "Pesto, Tomato & Mozzarella",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBs8UFLNnWR6bKUZ1SQhVBLuJ2GeEybka3g-CTmnwLSp4zFqub11orQXFzgn_QqeA4j29TYtA8fwOGAcfrCNRh2DBraQjwKqoHuCaJ92-bBhBS85z2hfS6Cyfvsi7WgYVXb2T-TXmtbyQbP7ipSV06SPxJGf2_QTEaeRCipBTt5VjOXpiu-6WlhUbXKOIt6oyMooKy0MHNHhTdtSCwLqo0NvZqo0nZ6NPgdu5shBLE=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "brioche-roll": {
-                                                "title": "Brioche Roll",
-                                                "items": [
-                                                            {
-                                                                        "name": "Bacon & Mozzarella",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBr558N37RxzfILg7vm_WrifPvgEDN0Mcb8rDi_FZoCd5mNi9g7li_58ZDiDUuPhJtiY0KoK5WIaysKyF1qParDWWeP1F1CHQBek8yDI5wglnUHV_dWYiGHVT4vcYowsGIGUSMGfsfichva59QvQmyBT85BCVKqa1j5QbzPGiNfebO-Wr8zSSXq9hQer-_i9jhLCBkfXu1hU05mjieTf52ZN_mvs0MYlioJvL9K=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    },
-                                    "bites": {
-                                                "title": "Bites",
-                                                "items": [
-                                                            {
-                                                                        "name": "12 Hash Brown Bites",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDKaT3fSVZx_JRT1o2auawnjKQ8urv7_uVzDyqNt6nefiCa63R7j-djBBaqMCUke1k9iXp0yl45xqiEU6TabflxQGlZhJNnT88sTz8OXaXtRJy3A-INtO5d5MhiO4fUmSRUX0jZCKO_CaCgxPLpKwWMwKcf3up2dWc4Etz8fIA8CZFKjRI5sLpHWD-uVuJatpjtQvyNdc_wwmXBpyefyrU7dUkw5gkdMybQcp4aElE=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Strawbana Bliss",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBSXWNmDzF5588MLK9nqseM6FAJ83-YKb-nW2eAxTs612XcL9dDrZyRObi0VVDwBw2llW3Hb015nZqOckeGXCzcqc0Xd3x8Wq4B2YHzLK9xAAfxLTzjktxGkhRKB4lCfRZnfj0MoqLiCDwkG76VrykbDgJMDdUxMJFftBEuKUC-9s2SiQmq6T65qqViKt2F7M3NfieAGqX2R9e7_c5qnM1dlPw2zYPcc8LpiDhcGfw=w1280",
+                                                            "description": "Strawberry and banana smoothie.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
                                                             },
-                                                            {
-                                                                        "name": "15 Hash Brown Bites",
-                                                                        "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAd3pAIqDi4CdSshKC_C_SkBeBZqNmLBZQTh2fYmEddPqC10h9MVaO7K2a-yRIUj9Iyq7In7ObYB2zI7YCMJlfBrvg4WnI6NzLa_0x2-FeI4-yIK_Ybi5qKKR88GIYHuqtxmL0kFkHBqef1vfSrGUM2lAzjHPXzTuq_2Wdg6jZQ3Gu7DAshFfDp79RiXcx8W6HfyHUCfsYd1OvMe6WM0h8c9wFfpUMOuv9lxDqXEFk=w1280",
-                                                                        "description": "",
-                                                                        "price": 0,
-                                                                        "foodItem": true,
-                                                                        "hidePrice": true
-                                                            }
-                                                ]
-                                    }
-                        }
-            }
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Hawaiian Paradise",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDrZh7F1zN6LejoggYy239Nt-tbCqfDCz3d1wHX4FMzRHGccFIzKWbHrVtMizrnktJWkdu_3wUyjqdMGWNQiKXAfnoSxTgYLMr9ws17vPLbeRlO_GjVc9tQ_Afof0r_uPcC-3X9Bt-rwYjOMqoHdFdTC-fN_9Aegh3WEE_d2_8HgHpL-vU3d0EbdTiJtEU3UyxhcMhDjJLzj1eP4ZtDmvLP5vs_AdZrh5bqxqTBheo=w1280",
+                                                            "description": "Tropical fruit smoothie.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
+                                                            },
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "lemonades": {
+                                        "title": "Lemonades",
+                                        "items": [
+                                                  {
+                                                            "name": "Pineapple",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUB2iiXXbcilChsuOOJS0A4JzrSLC3I1jj1UGfv8cmzJ5OQt0054a9NG7paMi2GXIQxiGHQxZ4epKxix5AkeIAlUWY9W-vq28r25qUHg0XzyhBtRVXkygj5KS4hvGi6InHH3suxjyhHvkeDFLKBcRHdDJcj4m8KvWKBlkAmn8uhpSkRTX7TjHxfPfgMbVARlqW_Mpy91S5Y8JNhmbbjRof_41drspfnny-tEcqkk6oY=w1280",
+                                                            "description": "Sparkling lemonade with pineapple.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
+                                                            },
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Strawberry",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUD1fJN86Uv71j8WcdEGA72VN8yMakyKFgcR7DyBPOPPlfmoZlJmQdH-zAnQiORCDcllxf5UhA2exQGConf6NZprSNocZs2SRHmY60lozD-VObj0fvMgwb2DWV-rin_NjXBYID-LJOwthbcpB9e0jMV9I5ZqKF68I6SIDLvbaemplNop0_gG5kv9eIOoaya8ZOOds75_BM_2n_OM3_4HwM2-kbG6g0UEiiBlZtZN1xg=w1280",
+                                                            "description": "Sparkling lemonade with strawberry.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
+                                                            },
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Peach Iced Tea",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUD9qfc1E2gxOR85s69F1kzvMZPzuhhwc-qul2QoejO4b6ThXURhGm3Hf8Io2Luhtj3JRHUkEA4ZBJK8kOXziArIYGwNzT1o5pBxJpAhyn8BXZnWwDh_UfzRLCrru5o1ks38i6Jv1oIjX4q1uF7pAEFlQn7X5fiFB3vQ5t0Lct5OWqhwcpKG4Gxgs9xphHHN0XOk8lw3PBPJjf__iB-zN1dlR6Wjz7P4X6VmpDVBpgQ=w1280",
+                                                            "description": "Chilled peach iced tea.",
+                                                            "sizes": [
+                                                                      "Regular",
+                                                                      "Large"
+                                                            ],
+                                                            "prices": {
+                                                                      "Regular": 0,
+                                                                      "Large": 0
+                                                            },
+                                                            "defaultSize": "Regular",
+                                                            "singleSize": false,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              }
+                    }
+          },
+          "food": {
+                    "title": "Food",
+                    "categories": {
+                              "toasted-half-cut-panini": {
+                                        "title": "Paninis",
+                                        "items": [
+                                                  {
+                                                            "name": "Ham & Cheese",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUADK6viAW-vPbksikq_l4WNKbejT1iObT9b7EQ7UYpFaZVeJzrRiaSOX5v_Q9c6YYs4tW1y5moiOZVbKENib4D3soSxgg_oox7cDweUEqXuyLPWZVMHSnUVx0dk5toWE6chYISpL50XjPFJsbPGSPrIo5C29CBq5XYJ5dd6D5RMSnBYvlQ-EHKOBPpbwQwZ6g7_BK9TLGGjehsRNtX4d3PEuvy6HiV3pE5MsFqQ=w1280",
+                                                            "description": "Toasted panini with ham and cheese.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Bacon & Mozzarella",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCKquDzU7G_3x9rI5LWUBlAtebR5iNp7txaDIOa7Y37-PUjMQOoCe_f6wrdSUN6slZ73A646ODmkjQbOQP8_JrvDci-GUDnCAbso5kZoSOUxLOKQGakaOCRNn2zs-23cWXqZqzuGqjtnqhRf02-sWwIVv__LEeWq5ADbTmwnA2QBS1dJC2B9-wY4TX0p8kemrctewmFZHHAE7iQQWEyDjTdlbLUnqNe-LPcqhiINU4=w1280",
+                                                            "description": "Toasted panini with bacon and mozzarella.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Pesto & Mozzarella",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBiTGO_TH9qRryiouwkokGVYZEI34WCme1-G45zVuQZZc3Sl_eOhG-J0Re4l6nJLJtC0pP1bJj6_aF6qeC-uB6x5-LWLdAUTw5qkWsFBVQ0pppqovWPiTgmDj74k8jUPrQUg_XvhW-Fqc9aK1FSXNcUnsx2qU6r8TmzvNh6ziqOjKDLgx929-fojRYa1FxZqQnshn19nTauicSCphgkdTGUHsD9LUHfAovtu2Wb=w1280",
+                                                            "description": "Toasted panini with pesto and mozzarella.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Tomato & Cheese",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDG1RgHyO3-Iw6sXmg7g930m7gCbAVvEEV1eQuCrWSVZQf312HzUYPzhHGIGwRNeyX_3YxYqhXfVow-ZClMAzu00e6zL8ew0SBeu7bu2ivNAKLf92iJep5_KQsn-XZ3tfqBxIPvo9Op8uwZgFqYCvB8mwtJsaYhzBO1tEXBdh7uuzAhitXPO6sYLd2QIRRCMegOhVxk0hmgyq3VaY1A4NMAr_MUh2RpT14-h0HX=w1280",
+                                                            "description": "Toasted panini with tomato and cheese.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "filled-croissants": {
+                                        "title": "Filled Croissants",
+                                        "items": [
+                                                  {
+                                                            "name": "Ham & Cheese",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCjJ0xymD0QaokQzLeBCHzmEZqvevcWg_yGWCevK4LCZlHEN225eu3Ol62xWb2_GkLYh3xfy1Kl8Y8ExS-A2g2Ndzr0hWtVbQ-G3Dyattv7lRZ7RZ5Y0lNx6tXigGm7BTRcvrGW6E6TnQEx2w9PPosMsrLxWDPJBV9I9gRJZBXF0J6YKACUBF7cvQ8TDsfwNVaXgex9UIVN0V4engCUibuUGbp4eV38k-T270WzD0E=w1280",
+                                                            "description": "Buttery croissant with ham and cheese.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Bacon & Mozzarella",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBlqmWkcWw6ID52eh7ezvCuHQESZoV7HuEF0TL6HJ5vevqy74gPyCXdOHhYHo_H9t0ll4PqplX3BLrEISLogidIzZuC8dlywH14gW9QOpEDi1CkSVSE-bsss2Xj5MH4xUAEB8MOidUXxeKOghgrjPSTr5C4Jj67X1gLd5RkteKzYpw-v-gZC3yMrYlVqFhG8asxSl_2-jGJQPzdkwtaFHxCxY3K3LOT50QDwSufRUY=w1280",
+                                                            "description": "Buttery croissant with bacon and mozzarella.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "Pesto, Tomato & Mozzarella",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBs8UFLNnWR6bKUZ1SQhVBLuJ2GeEybka3g-CTmnwLSp4zFqub11orQXFzgn_QqeA4j29TYtA8fwOGAcfrCNRh2DBraQjwKqoHuCaJ92-bBhBS85z2hfS6Cyfvsi7WgYVXb2T-TXmtbyQbP7ipSV06SPxJGf2_QTEaeRCipBTt5VjOXpiu-6WlhUbXKOIt6oyMooKy0MHNHhTdtSCwLqo0NvZqo0nZ6NPgdu5shBLE=w1280",
+                                                            "description": "Buttery croissant with pesto, tomato, and mozzarella.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "brioche-roll": {
+                                        "title": "Brioche Roll",
+                                        "items": [
+                                                  {
+                                                            "name": "Bacon & Mozzarella",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUBr558N37RxzfILg7vm_WrifPvgEDN0Mcb8rDi_FZoCd5mNi9g7li_58ZDiDUuPhJtiY0KoK5WIaysKyF1qParDWWeP1F1CHQBek8yDI5wglnUHV_dWYiGHVT4vcYowsGIGUSMGfsfichva59QvQmyBT85BCVKqa1j5QbzPGiNfebO-Wr8zSSXq9hQer-_i9jhLCBkfXu1hU05mjieTf52ZN_mvs0MYlioJvL9K=w1280",
+                                                            "description": "Soft brioche roll with bacon and mozzarella.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              },
+                              "bites": {
+                                        "title": "Bites",
+                                        "items": [
+                                                  {
+                                                            "name": "12 Hash Brown Bites",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUDKaT3fSVZx_JRT1o2auawnjKQ8urv7_uVzDyqNt6nefiCa63R7j-djBBaqMCUke1k9iXp0yl45xqiEU6TabflxQGlZhJNnT88sTz8OXaXtRJy3A-INtO5d5MhiO4fUmSRUX0jZCKO_CaCgxPLpKwWMwKcf3up2dWc4Etz8fIA8CZFKjRI5sLpHWD-uVuJatpjtQvyNdc_wwmXBpyefyrU7dUkw5gkdMybQcp4aElE=w1280",
+                                                            "description": "Crispy hash brown bites.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  },
+                                                  {
+                                                            "name": "15 Hash Brown Bites",
+                                                            "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUAd3pAIqDi4CdSshKC_C_SkBeBZqNmLBZQTh2fYmEddPqC10h9MVaO7K2a-yRIUj9Iyq7In7ObYB2zI7YCMJlfBrvg4WnI6NzLa_0x2-FeI4-yIK_Ybi5qKKR88GIYHuqtxmL0kFkHBqef1vfSrGUM2lAzjHPXzTuq_2Wdg6jZQ3Gu7DAshFfDp79RiXcx8W6HfyHUCfsYd1OvMe6WM0h8c9wFfpUMOuv9lxDqXEFk=w1280",
+                                                            "description": "Crispy hash brown bites to share.",
+                                                            "price": 0,
+                                                            "foodItem": true,
+                                                            "hidePrice": true
+                                                  }
+                                        ]
+                              }
+                    }
+          }
 };
 
         const extras = [
@@ -953,8 +1105,9 @@
             }
         }
     </script>
-    <!-- Poppins font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Menu fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <style>
         /* Essential styles that don't rely on Tailwind */
         html, body {
@@ -962,9 +1115,9 @@
             height: auto;
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif !important;
+            font-family: 'Lora', serif !important;
             background-color: white;
-            color: #555555;
+            color: #000000;
             font-weight: 500;
             text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
             overflow: hidden;
@@ -996,7 +1149,119 @@
             display: inline-block;
             text-align: center;
             font-size: 1.5rem;
-            color: #393939;
+            font-family: 'Abril Fatface', cursive;
+            font-weight: 400 !important;
+            letter-spacing: 0.02em;
+            color: #000000;
+        }
+
+        .tab-btn {
+            font-weight: 400 !important;
+            letter-spacing: 0.02em;
+        }
+
+        /* Weekly featured drink */
+        .drink-of-the-week {
+            max-width: 760px;
+            margin: 6px auto 22px;
+            padding: 18px;
+            border-radius: 8px;
+            background-color: #d9f1f8;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+            text-align: left;
+        }
+
+        .drink-of-the-week .menu-grid {
+            display: block;
+        }
+
+        .drink-of-the-week-item {
+            display: grid;
+            grid-template-columns: 150px minmax(0, 1fr);
+            align-items: center;
+            column-gap: 22px;
+            background-color: transparent;
+            overflow: visible;
+        }
+
+        .drink-of-the-week-item .image-container {
+            grid-column: 1;
+            grid-row: 1;
+            width: 150px;
+            aspect-ratio: 1 / 1;
+            padding-bottom: 0;
+            border-radius: 8px;
+        }
+
+        .drink-of-the-week-item .item-header {
+            display: none;
+        }
+
+        .drink-of-the-week-copy {
+            grid-column: 2;
+            grid-row: 1;
+            cursor: pointer;
+        }
+
+        .drink-of-the-week-label {
+            margin: 0 0 8px;
+            color: #2596be;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .drink-of-the-week-title {
+            margin: 0 0 8px;
+            color: #000000;
+            font-family: 'Abril Fatface', cursive;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        .drink-of-the-week-description {
+            margin: 0;
+            color: #000000;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .drink-of-the-week-item .item-details {
+            grid-column: 1 / -1;
+            width: 100%;
+        }
+
+        .drink-of-the-week-item.expanded .item-details {
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(37, 150, 190, 0.3);
+        }
+
+        @media (max-width: 560px) {
+            .drink-of-the-week-item {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                row-gap: 14px;
+            }
+
+            .drink-of-the-week-item .image-container {
+                grid-column: 1;
+                grid-row: 1;
+                width: 140px;
+                height: 140px;
+            }
+
+            .drink-of-the-week-copy {
+                grid-column: 1;
+                grid-row: 2;
+                text-align: center;
+            }
+
+            .drink-of-the-week-item .item-details {
+                grid-column: 1;
+            }
         }
         
         /* View toggle controls */
@@ -1018,7 +1283,7 @@
             border-radius: 50%;
             border: none;
             background-color: transparent;
-            color: #6b7280;
+            color: #000000;
             cursor: pointer;
             transition: all 0.2s ease;
             display: flex;
@@ -1027,7 +1292,7 @@
         }
         
         .view-toggle-btn:hover {
-            color: #374151;
+            color: #000000;
         }
         
         .view-toggle-btn.active {
@@ -1158,13 +1423,15 @@
             font-size: 16px;
             font-weight: 700;
             margin: 0 0 4px 0;
-            color: #393939;
+            font-family: 'Lora', serif;
+            letter-spacing: 0;
+            color: #000000;
             text-align: left !important; /* Override the global h4 centering rule */
         }
         
         .list-view-description {
             font-size: 12px;
-            color: #6b7280;
+            color: #000000;
             margin: 0 0 4px 0;
             line-height: 1.3;
         }
@@ -1285,7 +1552,7 @@
             margin: 0;
             text-align: center;
             font-weight: 700;
-            color: #393939;
+            color: #000000;
         }
 
         /* Larger name for items without images */
@@ -1293,7 +1560,7 @@
             font-size: 18px;
             font-weight: 700;
             margin: 0 0 8px 0;
-            color: #393939;
+            color: #000000;
         }
         
         /* Badge styling */
@@ -1361,7 +1628,17 @@
             font-size: 16px;
             font-weight: 700;
             margin: 0;
-            color: #393939;
+            font-family: 'Lora', serif;
+            letter-spacing: 0;
+            color: #000000;
+        }
+
+        .item-header h4,
+        .large-name {
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            letter-spacing: 0;
+            color: #000000;
         }
         
         /* Empty category style */
@@ -1437,7 +1714,7 @@
             font-weight: 700;
             font-size: 14px;
             margin-bottom: 8px;
-            color: #555555;
+            color: #000000;
             text-align: center;
         }
         
@@ -1458,7 +1735,7 @@
             border: 1px solid #e5e7eb;
             cursor: pointer;
             transition: all 0.2s ease;
-            color: #555555;
+            color: #000000;
             font-weight: 500;
             min-width: 56px;
             text-align: center;
@@ -1505,7 +1782,7 @@
         .customise-btn {
             display: inline-block;
             background-color: #f3f4f6;
-            color: #555555;
+            color: #000000;
             padding: 8px 20px;
             margin-top: 12px;
             border-radius: 50px;
@@ -1530,7 +1807,7 @@
         .allergens-btn {
             display: inline-block;
             background-color: #f3f4f6;
-            color: #555555;
+            color: #000000;
             padding: 8px 20px;
             margin-top: 12px;
             margin-left: 8px;
@@ -1565,7 +1842,7 @@
             font-weight: 600;
             font-size: 14px;
             margin-bottom: 12px;
-            color: #374151;
+            color: #000000;
         }
 
         .allergen-item {
@@ -1593,7 +1870,7 @@
 
         .allergen-ingredients {
             font-size: 13px;
-            color: #6b7280;
+            color: #000000;
             line-height: 1.5;
         }
 
@@ -1690,14 +1967,14 @@
         <!-- View Toggle Controls -->
         <div class="view-controls flex justify-center items-center mb-4">
             <div class="view-toggle-container bg-gray-100 rounded-full p-1 flex">
-                <button id="list-view-btn" class="view-toggle-btn" data-view="list" title="List View">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
-                    </svg>
-                </button>
                 <button id="grid-view-btn" class="view-toggle-btn active" data-view="grid" title="Grid View">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
+                    </svg>
+                </button>
+                <button id="list-view-btn" class="view-toggle-btn" data-view="list" title="List View">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
                     </svg>
                 </button>
                 <!-- Temporarily hidden download button
@@ -1756,6 +2033,53 @@
             
             let hasCollections = false;
             let isFirstVisibleTab = true;
+
+            function createDrinkOfTheWeek(tabId) {
+                const feature = document.createElement('section');
+                feature.className = 'drink-of-the-week';
+
+                const weeklyItem = createMenuItem(
+                    { ...drinkOfTheWeek },
+                    `${tabId}-drink-of-the-week`,
+                    'drink-of-the-week',
+                    true
+                );
+                weeklyItem.classList.add('drink-of-the-week-item');
+
+                const copy = document.createElement('div');
+                copy.className = 'drink-of-the-week-copy';
+
+                const label = document.createElement('p');
+                label.className = 'drink-of-the-week-label';
+                label.textContent = 'Drink of the Week';
+
+                const title = document.createElement('h2');
+                title.className = 'drink-of-the-week-title';
+                title.textContent = drinkOfTheWeek.name;
+
+                const description = document.createElement('p');
+                description.className = 'drink-of-the-week-description';
+                description.textContent = drinkOfTheWeek.description;
+
+                copy.appendChild(label);
+                copy.appendChild(title);
+                copy.appendChild(description);
+                copy.addEventListener('click', function() {
+                    toggleAccordion(weeklyItem);
+                });
+
+                const detailsDescription = weeklyItem.querySelector('.item-details > p');
+                if (detailsDescription) {
+                    detailsDescription.remove();
+                }
+
+                const weeklyGrid = document.createElement('div');
+                weeklyGrid.className = 'menu-grid drink-of-the-week-grid';
+                weeklyItem.insertBefore(copy, weeklyItem.querySelector('.item-details'));
+                weeklyGrid.appendChild(weeklyItem);
+                feature.appendChild(weeklyGrid);
+                return feature;
+            }
             
             for (const tabId in menuData) {
                 const tab = menuData[tabId];
@@ -1770,11 +2094,11 @@
                 tabButton.className = `tab-btn flex-shrink-0 px-4 py-2 mr-2 rounded-full ${isActiveTab ? 'active bg-primary text-white' : 'bg-gray-200 hover:bg-gray-300'} font-bold`;
                 tabButton.dataset.tab = tabId;
                 tabButton.textContent = tab.title;
-                tabButton.style.fontFamily = "'Poppins', sans-serif";
+                tabButton.style.fontFamily = "'Abril Fatface', cursive";
                 if (isActiveTab) {
                     tabButton.style.backgroundColor = '#2596be';
                 } else {
-                    tabButton.style.color = '#393939';
+                    tabButton.style.color = '#000000';
                 }
 
                 if (isCollectionsTab) {
@@ -1793,11 +2117,7 @@
                 tabContent.id = tabId;
                 // Only make the first non-collections tab active
                 tabContent.className = `tab-content ${isActiveTab ? 'active' : ''}`;
-                
-
-
-
-
+                tabContent.appendChild(createDrinkOfTheWeek(tabId));
                 
                 // Generate categories and items
                 for (const categoryId in tab.categories) {
@@ -1806,8 +2126,8 @@
                     // Add category title with unique ID for deep linking
                     const categoryTitle = document.createElement('h3');
                     categoryTitle.className = 'text-3xl font-bold category-title text-center mx-auto';
-                    categoryTitle.style.fontFamily = "'Poppins', sans-serif";
-                    categoryTitle.style.color = '#393939';
+                    categoryTitle.style.fontFamily = "'Abril Fatface', cursive";
+                    categoryTitle.style.color = '#000000';
                     categoryTitle.style.textShadow = '0 0 1px rgba(37, 150, 190, 0.2)';
                     categoryTitle.textContent = category.title;
                     // Create unique ID: tab-category (e.g., "hot-drinks-coffee", "food-pastries")
@@ -1943,15 +2263,15 @@
             });
             
             // Function to create a menu item element
-            function createMenuItem(item, itemId, categoryId) {
+            function createMenuItem(item, itemId, categoryId, forceGrid = false) {
                 // Create item element
                 const itemElement = document.createElement('div');
-                itemElement.className = currentView === 'grid' ? 'menu-item' : 'menu-item list-view';
+                itemElement.className = currentView === 'grid' || forceGrid ? 'menu-item' : 'menu-item list-view';
                 itemElement.id = itemId;
                 itemElement.dataset.category = categoryId;
                 
                 // Handle list view layout
-                if (currentView === 'list') {
+                if (currentView === 'list' && !forceGrid) {
                     return createListViewItem(item, itemElement);
                 }
                 
@@ -2228,12 +2548,6 @@
                         
                         sizeSection.appendChild(sizeOptionsDiv);
                         detailsDiv.appendChild(sizeSection);
-                    } else {
-                        // For single size items like tea, show size info text instead
-                        const sizeInfo = document.createElement('p');
-                        sizeInfo.className = 'size-info';
-                        sizeInfo.textContent = `Standard ${item.defaultSize} size`;
-                        detailsDiv.appendChild(sizeInfo);
                     }
                     
                     // Only add customisation options if not disabled
@@ -2655,12 +2969,6 @@
                         
                         sizeSection.appendChild(sizeOptionsDiv);
                         detailsDiv.appendChild(sizeSection);
-                    } else {
-                        // For single size items like tea, show size info text instead
-                        const sizeInfo = document.createElement('p');
-                        sizeInfo.className = 'size-info';
-                        sizeInfo.textContent = `Standard ${item.defaultSize} size`;
-                        detailsDiv.appendChild(sizeInfo);
                     }
                     
                     // Only add customisation options if not disabled
@@ -2986,6 +3294,7 @@
                     const tabContent = document.createElement('div');
                     tabContent.id = tabId;
                     tabContent.className = 'tab-content';
+                    tabContent.appendChild(createDrinkOfTheWeek(tabId));
                     
                     // Generate categories and items
                     for (const categoryId in tab.categories) {
@@ -2994,8 +3303,8 @@
                         // Add category title
                         const categoryTitle = document.createElement('h3');
                         categoryTitle.className = 'text-3xl font-bold category-title text-center mx-auto';
-                        categoryTitle.style.fontFamily = "'Poppins', sans-serif";
-                        categoryTitle.style.color = '#393939';
+                        categoryTitle.style.fontFamily = "'Abril Fatface', cursive";
+                        categoryTitle.style.color = '#000000';
                         categoryTitle.style.textShadow = '0 0 1px rgba(37, 150, 190, 0.2)';
                         categoryTitle.textContent = category.title;
                         tabContent.appendChild(categoryTitle);
@@ -3091,7 +3400,7 @@
                         btn.classList.remove('text-white');
                         btn.classList.add('bg-gray-200');
                         btn.style.backgroundColor = '';
-                        btn.style.color = '#393939';
+                        btn.style.color = '#000000';
                     });
                     
                     // Add active class to clicked tab
